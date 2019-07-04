@@ -1,13 +1,16 @@
 package com.wcs.app.sb.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class City {
 @Id
 	private int cityid;
 	private String cityname;
+	@OneToOne(cascade=CascadeType.ALL)
 	private District district;
 	public int getCityid() {
 		return cityid;

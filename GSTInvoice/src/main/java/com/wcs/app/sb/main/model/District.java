@@ -1,7 +1,9 @@
 package com.wcs.app.sb.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class District {
@@ -9,6 +11,7 @@ public class District {
     private int districtid;
 
 	private String districtname;
+	@OneToOne(cascade=CascadeType.ALL)
 	private State state;
 	public int getDistrictid() {
 		return districtid;

@@ -1,7 +1,9 @@
 package com.wcs.app.sb.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class State {
@@ -26,6 +28,7 @@ public void setCountry(Country country) {
 	this.country = country;
 }
 	private String statename;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Country country;
 	
 }
