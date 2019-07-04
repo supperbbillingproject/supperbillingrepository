@@ -1,9 +1,11 @@
 package com.wcs.app.sb.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Payment {
@@ -13,6 +15,7 @@ public class Payment {
 	private String paymentmode;
 	private String invoiceno;
 	private float paymentamount;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Status paymentstatus;
 	private String paymentacceptedby;
 	public int getId() {

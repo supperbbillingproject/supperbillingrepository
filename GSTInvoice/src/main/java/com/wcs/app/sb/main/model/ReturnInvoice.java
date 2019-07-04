@@ -3,10 +3,12 @@ package com.wcs.app.sb.main.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class ReturnInvoice {
@@ -16,6 +18,7 @@ public class ReturnInvoice {
 	private Map<String, Returnquantity> map = new HashMap<>();
 	private String date;
 	private String invoiceno;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Status returnstatus;
 	private float returnamount;
 	private String returnby;
