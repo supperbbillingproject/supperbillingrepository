@@ -13,6 +13,7 @@ public class ProductPriceMapping {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int productpricemappingid;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Product product;
 	private float purchaseprice;
 	private float taxgroup;

@@ -1,11 +1,16 @@
 package com.wcs.app.sb.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class State {
 @Id
+@GeneratedValue(strategy=GenerationType.AUTO)
 	private int stateid;
 	public int getStateid() {
 	return stateid;
@@ -26,6 +31,7 @@ public void setCountry(Country country) {
 	this.country = country;
 }
 	private String statename;
+	@OneToOne(cascade=CascadeType.ALL)
 	private Country country;
 	
 }
