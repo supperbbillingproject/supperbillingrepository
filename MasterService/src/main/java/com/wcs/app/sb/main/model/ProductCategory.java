@@ -17,13 +17,15 @@ public class ProductCategory {
 	public void setProductcategoryid(int productcategoryid) {
 		this.productcategoryid = productcategoryid;
 	}
-	public int getProductcategoryname() {
+	
+	public String getProductcategoryname() {
 		return productcategoryname;
 	}
-	public void setProductcategoryname(int productcategoryname) {
+	public void setProductcategoryname(String productcategoryname) {
 		this.productcategoryname = productcategoryname;
 	}
-	private int productcategoryname;
+
+	private String productcategoryname;
 	
 	
 }
